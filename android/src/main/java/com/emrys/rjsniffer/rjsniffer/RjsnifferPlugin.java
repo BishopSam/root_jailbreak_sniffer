@@ -2,7 +2,6 @@ package com.emrys.rjsniffer.rjsniffer;
 
 import static android.content.Context.BIND_AUTO_CREATE;
 import static com.emrys.rjsniffer.rjsniffer.Constdata.superUserPath;
-import static com.emrys.rjsniffer.rjsniffer.Native.AntiFridaNativeLoader_checkFridaByPort;
 import static com.emrys.rjsniffer.rjsniffer.Native.isMagiskPresentNative;
 
 import android.content.ComponentName;
@@ -137,7 +136,7 @@ public class RjsnifferPlugin implements FlutterPlugin, MethodCallHandler {
       } else if (call.method.equals("runprog3")) {
 
 
-        if (Settings.Secure.getInt(context.getContentResolver(), Settings.Global.ADB_ENABLED, 0) == 1 || AntiFridaNativeLoader_checkFridaByPort()) {
+        if (Settings.Secure.getInt(context.getContentResolver(), Settings.Global.ADB_ENABLED, 0) == 1 ) {
           result.success(true);
         } else {
           result.success(false);

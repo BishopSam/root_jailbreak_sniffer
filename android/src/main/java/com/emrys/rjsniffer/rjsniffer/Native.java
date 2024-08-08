@@ -7,6 +7,5 @@ class Native {
     }
 
     static native boolean isMagiskPresentNative();
-    static native boolean AntiFridaNativeLoader_checkFridaByPort();
 
 }

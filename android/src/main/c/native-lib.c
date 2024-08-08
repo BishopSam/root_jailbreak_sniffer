@@ -178,23 +178,3 @@ Java_com_emrys_rjsniffer_rjsniffer_Native_isMagiskPresentNative(JNIEnv *env, jcl
         return JNI_FALSE;
 }
 
-// JNIEXPORT jboolean JNICALL
-// Java_com_emrys_rjsniffer_rjsniffer_Native_AntiFridaNativeLoader_1checkFridaByPort(JNIEnv *env,
-//                                                                                   jclass clazz) {
-
-//     struct sockaddr_in sa;{};
-//     sa.sin_family = AF_INET;
-//     sa.sin_port = htons(27042);
-//     inet_aton("127.0.0.1", &sa.sin_addr);
-//     int sock = socket(AF_INET, SOCK_STREAM, 0);
-
-//     if (connect(sock, (struct sockaddr *) &sa, sizeof(sa)) == 0) {
-//         // we can connect to frida-server when it's running
-//         close(sock);
-//         //__android_log_print(ANDROID_LOG_INFO, TAG, "checkfridabyport");
-//         return JNI_TRUE;
-//     }
-
-//     return JNI_FALSE;
-
-// }
